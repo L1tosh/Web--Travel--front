@@ -1,0 +1,64 @@
+:root{
+    --background-color:#e6f1ff;
+    --header-color: #206ece;
+    --bar: #0073ff;
+    --text: #0d2b4f;
+    --links: #b7d7ff;
+    --hover-links:#5ba5ff ;
+}
+html{
+    font-size: 22px;
+    background-color: var(--background-color);
+}
+body{
+    width: 100%;
+    min-width: 800px;
+}
+h1{
+    font-size: 2rem;
+    color: var(--text);
+}
+header {
+    width: 100%;
+    min-width: 800px;
+    top:0;
+    z-index: 2; /* щоб slider повер header не був */
+    display: flex;
+    background-color: var(--header-color);
+    position: sticky;
+}
+.logo {
+    height: 2rem;
+    padding: 0.5rem;
+}
+.menu-links {
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.menu-links a {
+    margin-right: 1.5rem;
+}
+.container {
+    max-width: 1500px;
+    min-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.menu-links a {
+    text-decoration: none;
+    color: var(--links);
+    font-weight: bold;
+}
+
+.menu-links a:hover {
+    color: var(--hover-links);
+}
+
+@media (max-width: 896px) {
+    body {
+        min-width: 792px;
+    }
+    header {
+        min-width: 792px;
+    }
+}
