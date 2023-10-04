@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Увійти</title>
+    <link rel="stylesheet" type="text/css" href="../css/pages/login/general.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/login/section.css">
 </head>
 <body>
-
+    <div class="login-container">
+        <div class="photo">
+            <img src="../images/pages/login/login.jpeg">
+        </div>
+        <section>
+            <div class="text">
+                <h1>Туристичне агенство</h1>
+                <p>Введіть свої дані для входу в обліковий запис</p>
+            </div>
+            <form method="post"> <!--тут ми відправляли би наші дані на сервер-->
+                <div class="login-details">
+                    <!--                    <label for="email">Email:</label>-->
+                    <input placeholder="Електронна пошта" type="email" name="email" id="email" autocomplete="off">
+                    <input placeholder="Пароль" type="password" name="password" id="password" autocomplete="off">
+                </div>
+                <button type="submit">Увійти</button>
+            </form>
+        </section>
+    </div>
 </body>
 </html>

@@ -1,0 +1,37 @@
+:root{
+    --background-color:#c9dff9;
+    --header-color: #206ece;
+    --bar: #0073ff;
+    --text: #0d2b4f;
+    --lighter-text:#20589c;
+    --links: #b8d5ff;
+    --hover-links:#5ba5ff;
+}
+html{
+    font-size: 150%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+body > .login-container {
+    /*border: black solid 1px;*/
+    width: 65%;
+    display: flex;
+    margin-top: 8%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+    background-color: var(--links);
+    border-radius: 10px;
+}
+.login-container > .photo{
+    width: 40%;
+}
+
+.login-container > .photo > img {
+    width: 100%;
+    margin-right: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+
+}
