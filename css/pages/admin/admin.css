@@ -179,6 +179,9 @@ body {
 .activity-data .price, .joined, .status, .edit{
     text-align: center;
 }
+span{
+    color: var(--text);
+}
 
 @media (max-width: 1000px) {
     .activity .activity-data {
