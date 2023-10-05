@@ -8,10 +8,9 @@
 </head>
 <body>
 <div class="signup-container">
-    <div class="photo">
-        <img src="../images/pages/login/login.jpeg">
-    </div>
-    <section>
+<!--    <div class="photo">-->
+<!--        <img src="../images/pages/login/login.jpeg">-->
+<!--    </div>-->
         <div class="text">
             <h1>Туристичне агенство</h1>
             <p>Введіть свої дані для створення облікового запису</p>
@@ -19,27 +18,29 @@
         <form method="post"> <!--тут ми відправляли би наші дані на сервер-->
             <div class="signup-details">
                 <!--                    <label for="email">Email:</label>-->
-                <input placeholder="Електронна пошта" type="email" name="email" id="email" autocomplete="off">
-                <input placeholder="Пароль" type="password" name="password" id="password" autocomplete="off">
-                <input placeholder="Ім'я" type="text">
-                <input placeholder="Прізвище" type="text">
-                <input placeholder="По батькові" type="text">
-                <input placeholder="" type="date">
+                <input placeholder="Електронна пошта" type="email"  id="email" autocomplete="off">
+                <input placeholder="Пароль" type="password"  id="password" autocomplete="off">
+                <input placeholder="Ім'я" type="text" name="inline">
+                <input placeholder="Прізвище" type="text" name="inline">
+                <input placeholder="По батькові" type="text" name="inline"><br>
+                <label for="date">Дата народження:</label>
+                <input type="date" name="inline" id="date"><br>
                 <select>
                     <option></option>
-                    <option>Пункт 1</option>
-                    <option>Пункт 2</option>
-                </select>
-                <input type="file">
-
+                    <option>Чоловік</option>
+                    <option>Жінка</option>
+                    <option>Інше</option>
+                </select> <br>
+                <label for="file">Завантажте своє фото:</label>
+                <input type="file" name="inline" id="file">
 
             </div>
 
-            <a href="../pages/main.html">Створити акаунт</a>
+            <a href="../pages/main.html">Створити акаунт</a><br>
+            <div class="empty"></div>
 
             <!--                <button type="submit">Увійти</button>-->
         </form>
-    </section>
 </div>
 </body>
 </html>
