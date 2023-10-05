@@ -21,12 +21,12 @@ input {
 form{
     position: relative;
 }
-a{
+form a{
     text-align: center;
     text-decoration: none;
     position: absolute;
-    right: 15%;
-    margin-top: 7%;
+    right: 10%;
+    margin-top: 8%;
     padding-top: 3px;
     width: 5rem;
     height: 1.6rem;
@@ -37,15 +37,20 @@ a{
     color: var(--background-color);
     box-shadow: 4px 4px rgba(0, 0, 0, .5);
 }
-/*button:hover {*/
-/*    position: absolute;*/
-/*    right: 15%;*/
-/*    margin-top: 7%;*/
-/*    width: 5rem;*/
-/*    height: 1.6rem;*/
-/*    font-size: 1rem;*/
-/*    background-color: var(--text);*/
-/*    border: 0;*/
-/*    border-radius: 10px;*/
-/*    color: var(--background-color);*/
-/*}*/
+.signup-link p {
+    margin: 0;
+    margin-left: 5%;
+    margin-bottom: 2%;
+
+}
+.signup-link a {
+    text-decoration: none;
+    margin-left: 5%;
+    font-size: 1rem;
+    padding: 7px;
+    background-color: var(--text);
+    border: 0;
+    border-radius: 10px;
+    color: var(--background-color);
+    box-shadow: 4px 4px rgba(0, 0, 0, .5);
+}

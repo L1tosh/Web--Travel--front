@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Зареєструватись</title>
+    <link rel="stylesheet" type="text/css" href="../css/pages/signup/general.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/signup/section.css">
 </head>
 <body>
+<div class="signup-container">
+    <div class="photo">
+        <img src="../images/pages/login/login.jpeg">
+    </div>
+    <section>
+        <div class="text">
+            <h1>Туристичне агенство</h1>
+            <p>Введіть свої дані для створення облікового запису</p>
+        </div>
+        <form method="post"> <!--тут ми відправляли би наші дані на сервер-->
+            <div class="signup-details">
+                <!--                    <label for="email">Email:</label>-->
+                <input placeholder="Електронна пошта" type="email" name="email" id="email" autocomplete="off">
+                <input placeholder="Пароль" type="password" name="password" id="password" autocomplete="off">
+                <input placeholder="Ім'я" type="text">
+                <input placeholder="Прізвище" type="text">
+                <input placeholder="По батькові" type="text">
+                <input placeholder="" type="date">
+                <select>
+                    <option></option>
+                    <option>Пункт 1</option>
+                    <option>Пункт 2</option>
+                </select>
+                <input type="file">
 
+
+            </div>
+
+            <a href="../pages/main.html">Створити акаунт</a>
+
+            <!--                <button type="submit">Увійти</button>-->
+        </form>
+    </section>
+</div>
 </body>
 </html>
