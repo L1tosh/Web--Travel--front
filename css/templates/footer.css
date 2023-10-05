@@ -23,9 +23,3 @@ footer > div.contacts > a {
 footer > div.contacts > a:hover {
     color: var(--hover-links);
 }
-
-@media (max-width: 896px) {
-    footer {
-        min-width: 792px;
-    }
-}

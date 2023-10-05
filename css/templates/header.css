@@ -54,12 +54,3 @@ header {
 .menu-links a:hover {
     color: var(--hover-links);
 }
-
-@media (max-width: 896px) {
-    body {
-        min-width: 792px;
-    }
-    header {
-        min-width: 792px;
-    }
-}
