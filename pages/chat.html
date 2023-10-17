@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/templates/header.css">
     <link rel="stylesheet" type="text/css" href="../css/templates/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/pages/chat/chat.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/chat/transliteration.css">
 
     <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
     <script src="../js/addTemplate.js"></script>
@@ -31,7 +32,22 @@
     </div>
 </main>
 
+<div class="transliterate">
+    <div class="text-area">
+        <textarea class="text" id="ukrainianText" oninput="transliterate()">
+За сонцем хмаронька пливе,
+Червоні поли розстилає
+І сонце спатоньки зове
+У синє море: покриває
+Рожевою пеленою,
+Мов мати дитину.
+        </textarea>
+        <textarea class="text" id="transliteratedText" readonly name="name"></textarea>
+    </div>
+</div>
+
 <footer id="footer"></footer>
 <script src="../js/chat.js"></script>
+<script src="../js/transliter.js"></script>
 </body>
 </html>

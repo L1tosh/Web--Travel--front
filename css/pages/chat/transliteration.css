@@ -1,0 +1,23 @@
+.transliterate {
+    width: 100%;
+}
+
+.text-area {
+    width: 78%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    width: 44%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    resize: none;
+    font-size: 18px;
+}
+
+.text::-webkit-scrollbar {
+    width: 0;
+}

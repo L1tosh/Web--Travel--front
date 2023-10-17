@@ -48,6 +48,11 @@ body {
     border: 1px solid #000;
     background-color: var(--header-color);
     border-radius: 5px;
+    transition: 1s ease;
+}
+
+.text-input button:hover {
+    background-color: var(--hover-links);
 }
 
 #chat-area {
