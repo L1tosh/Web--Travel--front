@@ -7,7 +7,7 @@ const diagonal = document.getElementById('diagonal');
 function calculatePerimeter() {
     const length = parseFloat(lengthInput.value) || 0;
     const width = parseFloat(widthInput.value) || 0;
-    perimeter.textContent = 2  * (length + width);
+    perimeter.textContent = 2  * (Math.abs(length) + Math.abs(width));
 
 }
 function calculateArea() {
@@ -18,7 +18,8 @@ function calculateArea() {
 function calculateDiagonal() {
     const length = parseFloat(lengthInput.value) || 0;
     const width = parseFloat(widthInput.value) || 0;
-    diagonal.textContent = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
+    result = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
+    diagonal.textContent = Number(result.toFixed(3));
 }
 
 function calculate() {
@@ -26,6 +27,11 @@ function calculate() {
         calculatePerimeter();
         calculateArea();
         calculateDiagonal();
+    }
+    else {
+        perimeter.textContent = 0;
+        area.textContent = 0;
+        diagonal.textContent = 0;
     }
 }
 function isValid(length, width){
