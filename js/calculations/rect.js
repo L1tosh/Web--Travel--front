@@ -5,19 +5,19 @@ const area = document.getElementById('area');
 const diagonal = document.getElementById('diagonal');
 
 function calculatePerimeter() {
-    const length = parseFloat(lengthInput.value) || 0;
-    const width = parseFloat(widthInput.value) || 0;
+    const length = lengthInput.value;
+    const width = widthInput.value;
     perimeter.textContent = 2  * (Math.abs(length) + Math.abs(width));
 
 }
 function calculateArea() {
-    const length = parseFloat(lengthInput.value) || 0;
-    const width = parseFloat(widthInput.value) || 0;
+    const length = lengthInput.value;
+    const width = widthInput.value;
     area.textContent = length * width;
 }
 function calculateDiagonal() {
-    const length = parseFloat(lengthInput.value) || 0;
-    const width = parseFloat(widthInput.value) || 0;
+    const length = lengthInput.value;
+    const width = widthInput.value;
     result = Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
     diagonal.textContent = Number(result.toFixed(3));
 }
