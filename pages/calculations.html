@@ -12,12 +12,14 @@
 
     <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
     <script src="../js/addTemplate.js"></script>
+
 </head>
 <body>
 <header id="header"></header>
 <main class="main">
+<!--    TODO: add style-->
+<!--    TODO: as far as possible add adaptivity: when in a phone mode make the boxes line up one by one downwards-->
     <div class="container">
-<!--        TODO: go on working here with rect calculations-->
         <div class="box">
             <h2>Розрахунок даних прямокутника</h2>
             <form id="rectangle-form">
@@ -28,39 +30,27 @@
                 <input type="number" id="width" name="width" required>
             </form>
             <div class="results">
-                <h2>arelabi</h2>
-                <p>Площа: <span id="result">0</span></p>
-                <p>ADBO:J</p>
-                <p>ADBO:J</p>
+                <h2>Результат</h2>
+                <p>Периметр: <span id="perimeter">0</span></p>
+                <p>Площа: <span id="area">0</span></p>
+                <p>Діагональ: <span id="diagonal">0</span></p>
             </div>
         </div>
         <div class="box">
-<!--            TODO: then go here and code up dayOfBirth functionality -->
-
+            <h2>Чи пам’ятаєте ви в який день тижня народилися?</h2>
+            <form id="dayOfBirth-form">
+                <label for="date">Дата народження: </label>
+                <input type="date" id="date" name="date" required>
+                <div class="results">
+                    <h2>Результат</h2>
+                    <p> <span id="dayOfBirth"> </span></p>
+                </div>
+            </form>
         </div>
     </div>
 </main>
-
+<script src="../js/calculations/rect.js"></script>
+<script src="../js/calculations/dayOfBirth.js"></script>
 <footer id="footer"></footer>
-<!--my js files here-->
-<!--<script src="../js/chat.js"></script>-->
-<!--<script src="../js/transliter.js"></script>-->
-<script>
-<!--    TODO: move the code into a separate js file-->
-    // JavaScript for calculating the area on input change
-    const lengthInput = document.getElementById('length');
-    const widthInput = document.getElementById('width');
-    const result = document.getElementById('result');
-
-    function calculateArea() {
-        const length = parseFloat(lengthInput.value) || 0;
-        const width = parseFloat(widthInput.value) || 0;
-        const area = length * width;
-        result.textContent = area;
-    }
-
-    lengthInput.addEventListener('input', calculateArea);
-    widthInput.addEventListener('input', calculateArea);
-</script>
 </body>
 </html>
