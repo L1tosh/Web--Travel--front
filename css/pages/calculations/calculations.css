@@ -1,0 +1,19 @@
+.main {
+    width: 100%;
+}
+.container {
+    width: 78%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.box {
+    width: 44%;
+    /*here either leave empty to let text define the height or write it: px or sth else*/
+    /*height: 200px;*/
+    padding: 15px;
+    border-radius: 15px;
+    border: black solid 1px;
+    resize: none;
+    font-size: 18px;
+}

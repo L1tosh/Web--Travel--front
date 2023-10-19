@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Обчислення</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="../css/templates/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/templates/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/pages/calculations/calculations.css">
+
+    <script src="https://kit.fontawesome.com/018f2343ea.js" crossorigin="anonymous"></script>
+    <script src="../js/addTemplate.js"></script>
+</head>
+<body>
+<header id="header"></header>
+<main class="main">
+    <div class="container">
+<!--        TODO: go on working here with rect calculations-->
+        <div class="box">
+            <h2>Розрахунок даних прямокутника</h2>
+            <form id="rectangle-form">
+                <label for="length">Довжина: </label>
+                <input type="number" id="length" name="length" required>
+
+                <label for="width">Ширина: </label>
+                <input type="number" id="width" name="width" required>
+            </form>
+            <div class="results">
+                <h2>arelabi</h2>
+                <p>Площа: <span id="result">0</span></p>
+                <p>ADBO:J</p>
+                <p>ADBO:J</p>
+            </div>
+        </div>
+        <div class="box">
+<!--            TODO: then go here and code up dayOfBirth functionality -->
+
+        </div>
+    </div>
+</main>
+
+<footer id="footer"></footer>
+<!--my js files here-->
+<!--<script src="../js/chat.js"></script>-->
+<!--<script src="../js/transliter.js"></script>-->
+<script>
+<!--    TODO: move the code into a separate js file-->
+    // JavaScript for calculating the area on input change
+    const lengthInput = document.getElementById('length');
+    const widthInput = document.getElementById('width');
+    const result = document.getElementById('result');
+
+    function calculateArea() {
+        const length = parseFloat(lengthInput.value) || 0;
+        const width = parseFloat(widthInput.value) || 0;
+        const area = length * width;
+        result.textContent = area;
+    }
+
+    lengthInput.addEventListener('input', calculateArea);
+    widthInput.addEventListener('input', calculateArea);
+</script>
+</body>
+</html>
