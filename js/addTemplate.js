@@ -11,7 +11,7 @@ fetch('../templates/footer.html')
         document.getElementById('footer').innerHTML = data;
     })
     .catch(error => console.error('Помилка завантаження footer.html:', error));
-fetch('../pages/registration/table.html')
+fetch('../templates/table.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('table').innerHTML = data;
