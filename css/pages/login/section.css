@@ -1,3 +1,40 @@
+html{
+    font-size: 120%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+body > .login-container {
+    /*border: black solid 1px;*/
+    width: 65%;
+    display: flex;
+    margin-top: 8%;
+    border: 3px solid var(--text);
+    background-color: var(--links);
+    border-radius: 10px;
+}
+.login-container > .photo{
+    width: 40%;
+}
+
+.login-container > .photo > img {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 4px;
+    margin-left: 4px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.login-container > .photo > img:hover {
+    transform: scale(1.01);
+    opacity: .85;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .8);
+}
+
 .login-container > section{
     width: 60%;
 }
