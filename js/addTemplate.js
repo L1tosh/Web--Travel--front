@@ -1,17 +1,17 @@
-fetch('templates/header.html')
+fetch('../templates/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
     })
     .catch(error => console.error('Помилка завантаження header.html:', error));
 
-fetch('templates/footer.html')
+fetch('../templates/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer').innerHTML = data;
     })
     .catch(error => console.error('Помилка завантаження footer.html:', error));
-fetch('templates/table.html')
+fetch('../templates/table.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('table').innerHTML = data;

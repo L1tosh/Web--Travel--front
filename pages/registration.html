@@ -15,7 +15,7 @@
             <h1>Туристичне агенство</h1>
             <p>Введіть свої дані для створення облікового запису:</p>
         </div>
-        <form id="registration">
+        <div id="registration">
             <div class="main-info">
                 <input placeholder="Ім'я" type="text" name="inline" id="firstname">
                 <span id="firstname-error" class="error"></span>
@@ -48,14 +48,50 @@
                 <input type="file" name="inline" id="file">
                 <span id="file-error" class="error"></span>
             </div>
-            <button>Створити акаунт</button>
+            <button id="button">Створити акаунт</button>
             <div class="empty"></div>
 
-        </form>
+        </div>
     </div>
 </section>
 
-<section id="table"></section>
+<section class="table-container">
+    <div class="checkbox">
+        <span class="checkbox-title">Вибір користувача</span>
+    </div>
+    <div class="copy">
+        <button id="copy-title">Дублювати</button>
+    </div>
+    <div class="delete">
+        <button id="delete-title">Видалити</button>
+    </div>
+    <div class="surname">
+        <span class="surname-title">Прізвище</span>
+    </div>
+    <div class="name">
+        <span class="name-title">Ім'я</span>
+    </div>
+    <div class="middlename">
+        <span class="middlename-title">По батькові</span>
+    </div>
+    <div class="email">
+        <span class="email-title">Електронна пошта</span>
+
+    </div>
+    <div class="phone">
+        <span class="phone-title">Телефон</span>
+    </div>
+    <div class="password">
+        <span class="password-title">Пароль</span>
+    </div>
+    <div class="tabledate">
+        <span class="date-title">Дата народження</span>
+    </div>
+    <div class="tablegender">
+        <span class="tablegender-title">Стать</span>
+    </div>
+</section>
 <script src="../js/lab-6/fieldChecking.js"></script>
+<script src="../js/lab-6/addToTable.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form"); // Отримати вашу форму, якщо ви маєте одну на сторінці
+    const button = document.getElementById("button")
+    const form = document.querySelector("form");
 
     const firstnameInput = document.getElementById("firstname");
     const lastnameInput = document.getElementById("lastname");
@@ -43,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    form.addEventListener("submit", function (e) {
+    // form.addEventListener("submit", function (e) {
+    button.addEventListener("click", function (e) {
         let valid = true;
 
         if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(firstnameInput.value)) {
@@ -148,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (!valid) {
-            e.preventDefault(); // Заборонити відправку форми, якщо є помилки
+            e.preventDefault();
         }
     });
 });
