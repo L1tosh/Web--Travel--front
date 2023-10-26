@@ -5,12 +5,57 @@
     <title>Зареєструватися</title>
     <script src="../js/addTemplate.js"></script>
     <link rel="stylesheet" href="../css/templates/table.css">
+    <link rel="stylesheet" href="../css/pages/registration/registration.css">
+    <link rel="stylesheet" href="../css/pages/admin/admin.css">
 </head>
 <body>
 <section>
-<!--    форма для реєстрації. Твій блок. Під ним одразу йде моя таблиця-->
-    Hello from the registration
+    <div class="signup-container">
+        <div class="text">
+            <h1>Туристичне агенство</h1>
+            <p>Введіть свої дані для створення облікового запису:</p>
+        </div>
+        <form id="registration">
+            <div class="main-info">
+                <input placeholder="Ім'я" type="text" name="inline" id="firstname">
+                <span id="firstname-error" class="error"></span>
+                <input placeholder="Прізвище" type="text" name="inline" id="lastname">
+                <span id="lastname-error" class="error"></span>
+                <input placeholder="По батькові" type="text" name="inline" id="middlename">
+                <span id="middlename-error" class="error"></span>
+                <input placeholder="Електронна пошта" type="text" autocomplete="off" id="email">
+                <span id="email-error" class="error"></span>
+                <input placeholder="Телефон: +38(0" type="tel" name="phone" autocomplete="off" id="phone" class="phone-input" >
+                <span id="phone-error" class="error"></span>
+                <input placeholder="Пароль" type="password" autocomplete="off" id="password">
+                <span id="password-error" class="error"></span>
+                <input placeholder="Повторіть пароль" type="password"  autocomplete="off" id="password-repeat">
+                <span id="password-repeat-error" class="error"></span>
+            </div>
+            <div class="date">
+                <label for="date">Дата народження:</label>
+                <input type="date" name="inline" id="date">
+                <span id="date-error" class="error"></span>
+            </div>
+            <div class="gender">
+                <label for="date">Стать:</label>
+                <input type="radio" name="gender" value="male" id="male"> <label for="male">Чоловік</label>
+                <input type="radio" name="gender" value="female" id="female"> <label for="female">Жінка</label><br>
+                <span id="gender-error" class="error"></span>
+            </div>
+            <div class="user-image">
+                <label for="file">Завантажте своє фото:</label>
+                <input type="file" name="inline" id="file">
+                <span id="file-error" class="error"></span>
+            </div>
+            <button>Створити акаунт</button>
+            <div class="empty"></div>
+
+        </form>
+    </div>
 </section>
+
 <section id="table"></section>
+<script src="../js/lab-6/fieldChecking.js"></script>
 </body>
 </html>

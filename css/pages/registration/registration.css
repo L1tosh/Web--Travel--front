@@ -1,0 +1,169 @@
+:root{
+    --background-color:#c9dff9;
+    --header-color: #206ece;
+    --bar: #0073ff;
+    --text: #0d2b4f;
+    --lighter-text:#20589c;
+    --links: #b8d5ff;
+    --hover-links:#5ba5ff;
+}
+
+.text h1 {
+    text-align: center;
+    color: var(--text);
+    font-size: 48px;
+    margin-top: 20px;
+}
+.text p {
+    font-size: 18px;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    color: var(--text);
+}
+
+.signup-details label {
+    margin-left: 7%;
+
+}
+select{
+    margin-left: 7%;
+    margin-bottom: 1.5%;
+}
+
+form a{
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10%;
+    font-size: 1rem;
+    padding: 7px;
+    background-color: var(--text);
+    border: 0;
+    border-radius: 10px;
+    color: var(--background-color);
+    box-shadow: 4px 4px rgba(0, 0, 0, .5);
+}
+
+#registration button {
+    text-decoration: none;
+    min-width: 380px;
+    border-radius: 28px;
+    padding: 10px 28px;
+    margin: 12px auto 12px;
+    color: var(--background-color);
+    background-color: var(--text);
+    font-size: 18px;
+    box-shadow: 4px 4px rgba(0, 0, 0, .5);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#registration button:hover {
+    transform:  translateY(3px);
+    box-shadow: 1px 1px rgba(0, 0, 0, .5);
+}
+
+#registration button:active {
+    transform:  scale(.99);
+}
+
+body {
+    padding-top: 60px;
+    background-color: var(--background-color);
+}
+
+.signup-container {
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid var(--text);
+    background-color: var(--links);
+    border-radius: 10px;
+}
+
+section {
+    width: 100%;
+}
+
+#registration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#registration div {
+    width: 80%;
+    margin: 0 auto 16px;
+    font-size: 18px;
+    display: flex;
+}
+
+#registration input {
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0 6px 8px;
+    height: 46px;
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, .4);
+    background: var(--links);
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+    color: #000;
+}
+
+#registration label {
+    width: 200px;
+    padding: 10px 0 6px 0;
+}
+
+#registration input:focus {
+    border-bottom:  solid 1px var(--bar);
+    outline: 0;
+    text-align: center;
+}
+
+#registration input[type="radio"] {
+    height: 18px;
+    width: 18px;
+    margin-right: 6px;
+}
+
+#registration input[type="file"] {
+    border: none;
+    font-size: 16px;
+}
+
+#registration input[type="date"] {
+    width: 70%;
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, .4);
+}
+
+#registration input[type="date"]:focus   {
+    border-bottom:  solid 1px var(--header-color);
+    outline: 0;
+}
+
+#registration input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+#registration .date {
+    justify-content: space-between;
+}
+
+#registration .main-info {
+    flex-direction: column;
+}
+
+#registration .gender label {
+    padding: 0;
+}
+
+#registration .error{
+    text-align: center;
+    font-size: 14px;
+    color: var(--bar);
+}
