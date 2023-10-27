@@ -1,3 +1,15 @@
+const firstnameError = document.getElementById("firstname-error");
+const lastnameError = document.getElementById("lastname-error");
+const middlenameError = document.getElementById("middlename-error");
+const emailError = document.getElementById("email-error");
+const phoneError = document.getElementById("phone-error");
+const passwordError = document.getElementById("password-error");
+const passwordRepeatError = document.getElementById("password-repeat-error");
+
+const dateError = document.getElementById("date-error");
+const genderError = document.getElementById("gender-error");
+const fileError = document.getElementById("file-error");
+
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("button")
     const form = document.querySelector("form");
@@ -14,18 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const maleInput = document.getElementById("male");
     const femaleInput = document.getElementById("female");
     const fileInput = document.getElementById("file");
-
-    const firstnameError = document.getElementById("firstname-error");
-    const lastnameError = document.getElementById("lastname-error");
-    const middlenameError = document.getElementById("middlename-error");
-    const emailError = document.getElementById("email-error");
-    const phoneError = document.getElementById("phone-error");
-    const passwordError = document.getElementById("password-error");
-    const passwordRepeatError = document.getElementById("password-repeat-error");
-
-    const dateError = document.getElementById("date-error");
-    const genderError = document.getElementById("gender-error");
-    const fileError = document.getElementById("file-error");
 
 
     phoneInput.addEventListener("input", function() {
@@ -152,5 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!valid) {
             e.preventDefault();
         }
+
     });
 });
+
+
+
+
