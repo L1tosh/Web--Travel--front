@@ -10,24 +10,22 @@ const dateError = document.getElementById("date-error");
 const genderError = document.getElementById("gender-error");
 const fileError = document.getElementById("file-error");
 
+const button = document.getElementById("button")
+
+const firstnameInput = document.getElementById("firstname");
+const lastnameInput = document.getElementById("lastname");
+const middlenameInput = document.getElementById("middlename");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const passwordInput = document.getElementById("password");
+const passwordRepeatInput = document.getElementById("password-repeat");
+
+const dateInput = document.getElementById("date");
+const maleInput = document.getElementById("male");
+const femaleInput = document.getElementById("female");
+const fileInput = document.getElementById("file");
+
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("button")
-    const form = document.querySelector("form");
-
-    const firstnameInput = document.getElementById("firstname");
-    const lastnameInput = document.getElementById("lastname");
-    const middlenameInput = document.getElementById("middlename");
-    const emailInput = document.getElementById("email");
-    const phoneInput = document.getElementById("phone");
-    const passwordInput = document.getElementById("password");
-    const passwordRepeatInput = document.getElementById("password-repeat");
-
-    const dateInput = document.getElementById("date");
-    const maleInput = document.getElementById("male");
-    const femaleInput = document.getElementById("female");
-    const fileInput = document.getElementById("file");
-
-
     phoneInput.addEventListener("input", function() {
         let value = phoneInput.value.replace(/\D/g, ""); // Видаляємо всі нецифрові символи
 
@@ -46,6 +44,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // form.addEventListener("submit", function (e) {
     button.addEventListener("click", function (e) {
+        let valid = validation();
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+
+    firstnameInput.addEventListener("input", function (e) {
         let valid = true;
 
         if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(firstnameInput.value)) {
@@ -56,6 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
             firstnameError.style.display = "none";
         }
 
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+
+    lastnameInput.addEventListener("input", function (e) {
+        let valid = true;
+
         if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(lastnameInput.value)) {
             lastnameError.textContent = "Прізвище повинно містити лише літери та апострофи";
             lastnameError.style.display = "block";
@@ -63,6 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             lastnameError.style.display = "none";
         }
+
+        if (!valid) {
+            e.preventDefault();
+        }
+    });
+
+    middlenameInput.addEventListener("input", function (e) {
+        let valid = true;
 
         if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(middlenameInput.value)) {
             middlenameError.textContent = "По батькові повинно містити лише літери та апострофи";
@@ -72,55 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
             middlenameError.style.display = "none";
         }
 
-        if (!emailInput.value.includes("@")) {
-            emailError.textContent = "Електронна пошта повинна містити символ @";
-            emailError.style.display = "block";
-            valid = false;
-        } else {
-            emailError.style.display = "none";
+        if (!valid) {
+            e.preventDefault();
         }
+    });
 
-        if (phoneInput.value.length < 18) {
-            phoneError.textContent = "Невірно введений номер";
-            phoneError.style.display = "block";
-            valid = false;
-        } else {
-            phoneError.style.display = "none";
-        }
+    maleInput.addEventListener("input", function (e) {
+        let valid = true;
 
-
-        if (passwordInput.value.length < 8) {
-            passwordError.textContent = "Пароль повинен містити принаймні 8 символів";
-            passwordError.style.display = "block";
-            valid = false;
-        } else {
-            passwordError.style.display = "none";
-        }
-
-        const currentDate = new Date();
-        const selectedDate = new Date(dateInput.value);
-
-        if (!dateInput.value) {
-            dateError.textContent = "Поле дати народження не може бути порожнім.";
-            dateError.style.display = "block";
-            valid = false;
-        } else if (selectedDate > currentDate) {
-            dateError.textContent = "Такого не може бути...";
-            dateError.style.display = "block";
-            valid = false;
-        } else if (currentDate.getFullYear() - selectedDate.getFullYear() > 100) {
-            dateError.textContent = "Вам не може бути 100 років, я вам не вірю";
-            dateError.style.display = "block";
-            valid = false;
-        } else if (currentDate.getFullYear() - selectedDate.getFullYear() < 18) {
-            dateError.textContent = "Ви повині бути старше 18 років";
-            dateError.style.display = "block";
-            valid = false;
-        } else {
-            dateError.style.display = "none";
-        }
-
-        // Перевірка статі
         if (!maleInput.checked && !femaleInput.checked) {
             genderError.textContent = "Будь ласка, виберіть стать";
             genderError.style.display = "block";
@@ -129,33 +109,117 @@ document.addEventListener("DOMContentLoaded", function () {
             genderError.style.display = "none";
         }
 
-        // Перевірка файлу
-        const allowedExtensions = ["jpeg", "png", "jpg"];
-        const fileName = fileInput.value.toLowerCase();
-        const fileExtension = fileName.substr((fileName.lastIndexOf(".") + 1));
-        if (!allowedExtensions.includes(fileExtension)) {
-            fileError.textContent = "Файл повинен мати розширення .jpeg, .jpg або .png";
-            fileError.style.display = "block";
-            valid = false;
-        } else {
-            fileError.style.display = "none";
-        }
-
-        if (passwordInput.value !== passwordRepeatInput.value) {
-            passwordRepeatError.textContent = "Паролі не співпадають";
-            passwordRepeatError.style.display = "block";
-            valid = false;
-        } else {
-            passwordRepeatError.style.display = "none";
-        }
-
         if (!valid) {
             e.preventDefault();
         }
-
     });
+
 });
 
+function validation() {
+    let valid = true;
+
+    if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(firstnameInput.value)) {
+        firstnameError.textContent = "Ім'я повинно містити лише літери та апострофи";
+        firstnameError.style.display = "block";
+        valid = false;
+    } else {
+        firstnameError.style.display = "none";
+    }
+
+    if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(lastnameInput.value)) {
+        lastnameError.textContent = "Прізвище повинно містити лише літери та апострофи";
+        lastnameError.style.display = "block";
+        valid = false;
+    } else {
+        lastnameError.style.display = "none";
+    }
+
+    if (!/^[a-zA-Zа-яА-ЯІіЇїЄєҐґ' ]+$/.test(middlenameInput.value)) {
+        middlenameError.textContent = "По батькові повинно містити лише літери та апострофи";
+        middlenameError.style.display = "block";
+        valid = false;
+    } else {
+        middlenameError.style.display = "none";
+    }
+
+    if (!emailInput.value.includes("@")) {
+        emailError.textContent = "Електронна пошта повинна містити символ @";
+        emailError.style.display = "block";
+        valid = false;
+    } else {
+        emailError.style.display = "none";
+    }
+
+    if (phoneInput.value.length < 18) {
+        phoneError.textContent = "Невірно введений номер";
+        phoneError.style.display = "block";
+        valid = false;
+    } else {
+        phoneError.style.display = "none";
+    }
+
+    if (passwordInput.value.length < 8) {
+        passwordError.textContent = "Пароль повинен містити принаймні 8 символів";
+        passwordError.style.display = "block";
+        valid = false;
+    } else {
+        passwordError.style.display = "none";
+    }
+
+    let currentDate1 = new Date();
+    let selectedDate1 = new Date(dateInput.value);
+
+    if (!dateInput.value) {
+        dateError.textContent = "Поле дати народження не може бути порожнім.";
+        dateError.style.display = "block";
+        valid = false;
+    } else if (selectedDate1 > currentDate1) {
+        dateError.textContent = "Такого не може бути...";
+        dateError.style.display = "block";
+        valid = false;
+    } else if (currentDate1.getFullYear() - selectedDate1.getFullYear() > 100) {
+        dateError.textContent = "Вам не може бути 100 років, я вам не вірю";
+        dateError.style.display = "block";
+        valid = false;
+    } else if (currentDate1.getFullYear() - selectedDate1.getFullYear() < 18) {
+        dateError.textContent = "Ви повині бути старше 18 років";
+        dateError.style.display = "block";
+        valid = false;
+    } else {
+        dateError.style.display = "none";
+    }
+
+    // Перевірка статі
+    if (!maleInput.checked && !femaleInput.checked) {
+        genderError.textContent = "Будь ласка, виберіть стать";
+        genderError.style.display = "block";
+        valid = false;
+    } else {
+        genderError.style.display = "none";
+    }
+
+    // Перевірка файлу
+    const allowedExtensions = ["jpeg", "png", "jpg"];
+    const fileName = fileInput.value.toLowerCase();
+    const fileExtension = fileName.substr((fileName.lastIndexOf(".") + 1));
+    if (!allowedExtensions.includes(fileExtension)) {
+        fileError.textContent = "Файл повинен мати розширення .jpeg, .jpg або .png";
+        fileError.style.display = "block";
+        valid = false;
+    } else {
+        fileError.style.display = "none";
+    }
+
+    if (passwordInput.value !== passwordRepeatInput.value) {
+        passwordRepeatError.textContent = "Паролі не співпадають";
+        passwordRepeatError.style.display = "block";
+        valid = false;
+    } else {
+        passwordRepeatError.style.display = "none";
+    }
+    return valid;
+}
 
 
 
